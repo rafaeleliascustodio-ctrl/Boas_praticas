@@ -1,0 +1,45 @@
+class fornecedor:
+    def __init__(self, id, razao_social, cnpj, telefone, email):
+        self.__id = id
+        self.__razao_social = razao_social
+        self.__cnpj = cnpj
+        self.__telefone = telefone
+        self.__email = email
+
+    @property
+    def id(self):
+        return self.__id
+
+    @property
+    def razao_social(self):
+        return self.__razao_social
+
+    @property
+    def cnpj(self):
+        return self.__cnpj
+
+    @property
+    def telefone(self):
+        return self.__telefone
+
+    @property
+    def email(self):
+        return self.__email
+
+    @razao_social.setter
+    def razao_social(self, valor):
+        if not valor:
+            raise ValueError("A razão social não pode ser vazia.")
+        self.__razao_social = valor
+
+    @telefone.setter
+    def telefone(self, valor):
+        if not valor:
+            raise ValueError("O telefone não pode ser vazio.")
+        self.__telefone = valor
+
+    @email.setter
+    def email(self, valor):
+        if not valor:
+            raise ValueError("O email não pode ser vazio.")
+        self.__email = valor
